@@ -1,13 +1,13 @@
 const User = require('../models/user');
 const bcrypt = require('bcryptjs');
 
-const userController = {};
+const usersController = {};
 
-userController.index = (req, res) => {
+usersController.index = (req, res) => {
     res.redirect('/dashboard');
 };
 
-userController.create = (req, res) => {
+usersController.create = (req, res) => {
     const salt = bcrypt.genSaltSync();
     const hash = bcrypt.hashSync(req.body.password, salt);
     User.create({
@@ -25,4 +25,4 @@ userController.create = (req, res) => {
     });
 };
 
-module.exports = userController;
+module.exports = usersController;
