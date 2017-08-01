@@ -38,7 +38,12 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-
+const cryptoRoutes = require('./routes/crypto-routes');
+app.use('/dashboard', cryptoRoutes);
+const authRoutes = require('./routes/auth-routes');
+app.use('/auth', authRoutes);
+const userRoutes = require('./routes/user-routes');
+app.use('/user', userRoutes);
 
 app.use('*', (req, res) => {
     res.status(400).json({

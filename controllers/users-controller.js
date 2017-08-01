@@ -4,20 +4,22 @@ const bcrypt = require('bcryptjs');
 const usersController = {};
 
 usersController.index = (req, res) => {
-    res.redirect('/dashboard');
+    res.redirect('/');
 };
 
-usersController.create = (req, res) => {
+usersController.create = (req, res, next) => {
     const salt = bcrypt.genSaltSync();
     const hash = bcrypt.hashSync(req.body.password, salt);
     User.create({
         username: req.body.username,
         password_digest: hash,
         email: req.body.email,
-    }). then(user => {
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+    }).then(user => {
         req.login(user, (err) => {
             if(err) return next(err);
-            res.redirect('/user');
+            res.redirect('/');
         });
     }).catch(err => {
         console.log(err);

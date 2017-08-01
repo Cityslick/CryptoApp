@@ -14,5 +14,5 @@ CREATE TABLE IF NOT EXISTS tracking (
     symbol VARCHAR(255),
     name VARCHAR(255),
     price BIGINT,
-    user_id INTEGER REFERENCES users(id);
+    user_id INTEGER REFERENCES users(id)
 );

@@ -5,13 +5,13 @@ function comparePass(userPassword, databasePassword) {
 }
 
 function loginRedirect(req, res, next) {
-    if (req.user) return res.redirect('/dashboard');
+    if (req.user) return res.redirect('/');
     return next();
 }
 
 function loginRequired(req, res, next) {
     alert('Login required!');
-    if (!req.user) return res.redirect('/');
+    if (!req.user) return res.redirect('/auth/login');
     return next();
 }
 
