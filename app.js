@@ -39,7 +39,8 @@ app.get('/', (req, res) => {
 });
 
 const cryptoRoutes = require('./routes/crypto-routes');
-app.use('/dashboard', cryptoRoutes);
+app.get('/dashboard', cryptoRoutes);
+
 const authRoutes = require('./routes/auth-routes');
 app.use('/auth', authRoutes);
 const userRoutes = require('./routes/user-routes');
@@ -50,6 +51,7 @@ app.use('*', (req, res) => {
         message: 'Not found!',
     });
 });
+
 
 
 // NEWS API KEY: f98fb0a0ce69473d9c7e73599535d43b
