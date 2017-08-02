@@ -6,7 +6,7 @@ const authHelpers = require('../services/auth/auth-helpers');
 const liveCrypto = require('../controllers/livecrypto-controller');
 
 
-cryptoRouter.get('/dashboard', getCrypto.getPrices, liveCrypto.index);
+cryptoRouter.get('/dashboard', getCrypto.getPrices, getCrypto.getTweets, liveCrypto.index);
 
 
 module.exports = cryptoRouter;

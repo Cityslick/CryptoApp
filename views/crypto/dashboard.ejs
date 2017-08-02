@@ -1,10 +1,11 @@
 <% include ../partials/boilerplate %>
 
 <h1>THis is the dashboard</h1>
-<h3><%= prices.BTC.USD.FROMSYMBOL %></h3>
-<h3><%= prices.BTC.USD.PRICE %></h3>
-<h3><%= prices.BTC.USD.VOLUME24HOUR %></h3>
-<h3><%= prices.BTC.USD.HIGH24HOUR %></h3>
-<h3><%= prices.BTC.USD.LOW24HOUR %></h3>
+<h1><%= prices.BTC.USD %></h1>
+<h1><%= prices.ETH.USD %></h1>
+<h3>Price: <%= prices.BTC.USD.PRICE %></h3>
+<h3>Volume: <%= prices.BTC.USD.VOLUME24HOUR %></h3>
+<h3>High: <%= prices.BTC.USD.HIGH24HOUR %></h3>
+<h3>Low: <%= prices.BTC.USD.LOW24HOUR %></h3>
 
 <% include ../partials/end %>
