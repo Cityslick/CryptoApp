@@ -52,3 +52,4 @@ app.use('*', (req, res) => {
 });
 
 
+// NEWS API KEY: f98fb0a0ce69473d9c7e73599535d43b
