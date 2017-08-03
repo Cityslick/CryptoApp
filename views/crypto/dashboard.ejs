@@ -1,11 +1,15 @@
 <% include ../partials/boilerplate %>
 
 <h1>THis is the dashboard</h1>
-<h1><%= prices.BTC.USD %></h1>
-<h1><%= prices.ETH.USD %></h1>
-<h3>Price: <%= prices.BTC.USD.PRICE %></h3>
-<h3>Volume: <%= prices.BTC.USD.VOLUME24HOUR %></h3>
-<h3>High: <%= prices.BTC.USD.HIGH24HOUR %></h3>
-<h3>Low: <%= prices.BTC.USD.LOW24HOUR %></h3>
+<h3>Bitcoin Price: $<%= prices.BTC.USD %></h3>
+<h3>Ether Price: $<%= prices.ETH.USD %></h3>
+<h3>Bitcoin Cash Price: $<%= prices.BCH.USD %></h3>
+<h3>Litecoin Price: $<%= prices.LTC.USD %></h3>
+<h3>Ripple Price: $<%= prices.XRP.USD %></h3>
+<h3>Dash Price: $<%= prices.DASH.USD %></h3>
+<h3>Zcash Price: $<%= prices.ZEC.USD %></h3>
+<h3>DigiByte Price: $<%= prices.DGB.USD %></h3>
+<h3>NEM Price: $<%= prices.XEM.USD %></h3>
+
 
 <% include ../partials/end %>

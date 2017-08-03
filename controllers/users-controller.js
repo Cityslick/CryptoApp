@@ -4,7 +4,10 @@ const bcrypt = require('bcryptjs');
 const usersController = {};
 
 usersController.index = (req, res) => {
-    res.render('crypto/user');
+    res.render('crypto/user', {
+        currentPage: 'Profile',
+        data: res.user,
+    });
 };
 
 usersController.create = (req, res, next) => {
