@@ -5,18 +5,17 @@ $(function() {
 
 
 $(document).ready(function() {
-    let bitcoinData;
-    console.log('getting prices...');
     $.ajax({
         url: 'https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,BCH,ETH,LTC,XEM,XRP,DASH,ZEC,DGB&tsyms=USD',
         success: function(data) {
                 console.log(data);
-                bitcoinData = data;
+                getCoinData(data);
         }
     })
     function getCoinData(data) {
-        for (price in data.DISPLAY) {
-            console.log(price);
+        console.log('getting prices...');
+        for (coin in data.DISPLAY) {
+            console.log(coin);
         }
 
     }
