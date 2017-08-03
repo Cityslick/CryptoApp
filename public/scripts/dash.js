@@ -21,9 +21,21 @@ function showData(data){
     console.log(data)
     Object.keys(data.DISPLAY).map((name, i) => {
         const value = data.DISPLAY[name];
-        $('#'+name).text(value.USD.PRICE);
+        $('#'+name).text(`Price: ${value.USD.PRICE}
+        Open: ${value.USD.OPEN24HOUR} 
+        High: ${value.USD.HIGH24HOUR} 
+        Low: ${value.USD.LOW24HOUR} 
+        Pct Change ${value.USD.CHANGEPCT24HOUR}`);
+        
+        if(value.USD.PRICE >= value.USD.OPEN24HOUR) {
+            $('#'+name).css('color', 'green');
+            console.log('higher');
+        } else {
+            console.log('lower');
+            $('#'+name).css('color', 'red');
+        }
     })
-    
+
     // $('#bitcoin').text(data.DISPLAY[coin].USD);
 }
 
