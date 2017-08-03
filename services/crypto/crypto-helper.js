@@ -5,19 +5,16 @@ const st = require('stocktwits');
 require('dotenv').config();
 
 
-function callPrices() {
-    setInterval(
-        function getPrices(req, res, next) {
-            cc.priceMulti(['BTC', 'BCH', 'ETH', 'LTC', 'XEM', 'XRP', 'DASH', 'ZEC', 'DGB'], ['USD'])
-            .then(prices => {
-                console.log(prices);
-                res.locals = prices;
-                return next();
-            }).catch((err) => {
-                console.log(err);
-                next(err);
-            });
-        }, 3000);
+function getPrices(req, res, next) {
+    cc.priceFull(['BTC', 'BCH', 'ETH', 'LTC', 'XEM', 'XRP', 'DASH', 'ZEC', 'DGB'], ['USD'])
+    .then(prices => {
+        console.log(prices);
+        res.prices = prices;
+        return next();
+    }).catch((err) => {
+        console.log(err);
+        next(err);
+    });
 };      
 
 function getTweets(req, res, next) {
@@ -41,7 +38,7 @@ function getNews(req, res, next) {
 }
 
 module.exports = {
-    callPrices,
+    getPrices,
     getTweets,
     getNews
 }
