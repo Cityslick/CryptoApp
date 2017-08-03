@@ -26,8 +26,20 @@ function getTweets(req, res, next) {
 }
 
 
+function getNews(req, res, next) {
+    fetch('http://www.faroo.com/api?q=bitcoin&start=1&l=en&f=json&key=f98fb0a0ce69473d9c7e73599535d43b')
+        .then(news => {
+            console.log(res.news);
+            return next();
+        }).catch((err) => {
+            console.log(err);
+            next(err);
+        });
+}
+
 module.exports = {
     getPrices,
-    getTweets
+    getTweets,
+    getNews
 }
 

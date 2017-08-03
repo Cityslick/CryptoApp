@@ -6,6 +6,7 @@ liveCryptoController.index = (req, res) => {
         currentPage: 'dashboard',
         prices: res.prices,
         tweets: res.body,
+        news: res.news,
     });
 };
 
