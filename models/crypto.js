@@ -9,4 +9,11 @@ Coin.findById = (id) => {
   `, [id]);
 }
 
+Coin.findByHandle = (handle) => {
+    return db.oneOrNone(`
+    SELECT * FROM coins
+    WHERE handle = $1
+    `, [handle]);
+}
+
 module.exports = Coin;

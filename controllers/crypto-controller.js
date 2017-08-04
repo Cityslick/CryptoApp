@@ -10,18 +10,6 @@ cryptoController.index = (req, res) => {
         });
 };
 
-cryptoController.show (req, res) => {
-    Coin.findById(req.params.id)
-        .then(coin => {
-            res.render('crypto/coin-single', {
-                currentPage: 'show',
-                message: 'ok',
-                data: coin,
-            });
-        }).catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
-}
+
 
 module.exports = cryptoController;
