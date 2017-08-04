@@ -13,14 +13,12 @@ liveCryptoController.index = (req, res) => {
 
 
 liveCryptoController.show = (req, res) => {
+    console.log('controller');
     res.render('crypto/coin-single', {
         message: 'ok',
         coin: res.locals.coin,
         data: res.locals.tweets,
-    }).catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    });
+    })
 }
 
 // liveCryptoController.show = (req, res, next) => {

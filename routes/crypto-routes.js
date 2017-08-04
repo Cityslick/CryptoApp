@@ -6,7 +6,7 @@ const liveCrypto = require('../controllers/livecrypto-controller');
 
 
 cryptoRouter.get('/dashboard', getCrypto.getPrices,
-        getCrypto.getNews, liveCrypto.index);
+         liveCrypto.index);
 
 cryptoRouter.get('/:id', getCrypto.getCoinFromDB, getCrypto.getTweets, liveCrypto.show);
 
