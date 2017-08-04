@@ -16,18 +16,21 @@ liveCryptoController.show = (req, res) => {
         Coin.findById(req.params.id)
         .then(coin => {
             data: coin
-        }).then(coin2 => {
-            fetch('https://api.stocktwits.com/api/2/streams/symbol/${data.handle}.json')
+        }).then(coin => {
+            let call = fetch('https://api.stocktwits.com/api/2/streams/symbol/${data.handle}.json');
+            return call;
         }).then(render => {
             res.render('crypto/coin-single', {
                 currentPage: 'show',
                 message: 'ok',
+                tweets: call
             });
         }).catch(err => {
             console.log(err);
             res.status(500).json(err);
         });
 }
+
 
 
 // liveCryptoController.show = (req, res) => {
