@@ -13,14 +13,15 @@ liveCryptoController.index = (req, res) => {
 };
 
 liveCryptoController.show = (req, res) => {
-    Coin.findByHandle(req.params.handle)
+        Coin.findById(req.params.id)
         .then(coin => {
-            return fetch('https://api.stocktwits.com/api/2/streams/symbol/${coin}.json');
+            data: coin
         }).then(coin2 => {
+            fetch('https://api.stocktwits.com/api/2/streams/symbol/${data.handle}.json')
+        }).then(render => {
             res.render('crypto/coin-single', {
                 currentPage: 'show',
-                tweets: coin,
-                data: coin2,
+                message: 'ok',
             });
         }).catch(err => {
             console.log(err);
