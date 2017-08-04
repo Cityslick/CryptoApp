@@ -16,14 +16,6 @@ function getPrices(req, res, next) {
     });
 };      
 
-// function getTweets(req, res, next) {
-//     st.get('streams/symbol/BTC.X', {limit:4},
-//         function(err, res) {
-//             let tweets = res.body;
-//             console.log(res.body);
-//             return next();
-//         })
-// };
 
 
 function getNews(req, res, next) {
@@ -36,6 +28,7 @@ function getNews(req, res, next) {
             next(err);
         });
 }
+
 
 module.exports = {
     getPrices,
