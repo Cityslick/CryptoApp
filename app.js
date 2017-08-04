@@ -41,6 +41,8 @@ app.get('/', (req, res) => {
 const cryptoRoutes = require('./routes/crypto-routes');
 app.get('/dashboard', cryptoRoutes);
 
+app.use('/', cryptoRoutes);
+
 const authRoutes = require('./routes/auth-routes');
 app.use('/auth', authRoutes);
 
