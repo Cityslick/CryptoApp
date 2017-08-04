@@ -9,3 +9,4 @@ Coin.findById = (id) => {
   `, [id]);
 }
 
+module.exports = Coin;

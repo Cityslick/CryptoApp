@@ -8,7 +8,6 @@ require('dotenv').config();
 function getPrices(req, res, next) {
     cc.priceFull(['BTC', 'BCH', 'ETH', 'LTC', 'XEM', 'XRP', 'DASH', 'ZEC', 'DGB'], ['USD'])
     .then(prices => {
-        console.log(prices);
         res.prices = prices;
         return next();
     }).catch((err) => {
@@ -22,8 +21,8 @@ function getTweets(req, res, next) {
         function(err, res) {
             console.log(res.body);
             return next();
-        });
-}
+        })
+};
 
 
 function getNews(req, res, next) {
