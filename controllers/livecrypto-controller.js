@@ -21,6 +21,12 @@ liveCryptoController.show = (req, res) => {
     })
 }
 
+liveCryptoController.follow = (req, res) => {
+    console.log(req.user.id);
+    console.log(req.params.id);
+   //return Coin.follow(req.user.id, req.params.id);
+}
+
 // liveCryptoController.show = (req, res, next) => {
 //         Coin.findById(req.params.id)
 //         .then(coin => {

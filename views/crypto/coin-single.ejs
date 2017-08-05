@@ -6,6 +6,7 @@
 <h3 id="<%= coin.symbol %>"></h3>
 <h3><%= coin.description %></h3>
 <h3><%= tweets.messages[0].body %></h3>
+<a href="/dashboard/follow/<%= coin.id %>">FOLLOW</a>
 
 
 <% include ../partials/end %>

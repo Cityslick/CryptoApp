@@ -16,4 +16,14 @@ Coin.findByHandle = (handle) => {
     `, [handle]);
 }
 
+Coin.follow = (user_id, coin_id) => {
+    console.log('random');
+    return db.none(`
+        INSERT INTO tracking
+        (user_id, coin_id)
+        VALUES
+        ($1, $2)   
+    `, [user_id, coin_id]);
+}
+
 module.exports = Coin;

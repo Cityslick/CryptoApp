@@ -4,15 +4,11 @@ const bcrypt = require('bcryptjs');
 const usersController = {};
 
 usersController.index = (req, res) => {
-    console.log('controller');
-    User.trackCoin(req.user.id)
-        .then(coins => {
-            res.json({
-                user: req.user,
-                coins: coins,
-            })
-        })
-}
+    res.render('crypto/user', {
+        currentPage: 'Profile',
+        user: req.user,
+    });
+};
 
 usersController.create = (req, res, next) => {
     const salt = bcrypt.genSaltSync();

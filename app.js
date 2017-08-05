@@ -39,15 +39,16 @@ app.get('/', (req, res) => {
 });
 
 const cryptoRoutes = require('./routes/crypto-routes');
-app.get('/dashboard', cryptoRoutes);
+app.use('/dashboard', cryptoRoutes);
 
-app.use('/', cryptoRoutes);
+// app.use('/', cryptoRoutes);
 
 const authRoutes = require('./routes/auth-routes');
 app.use('/auth', authRoutes);
 
 const userRoutes = require('./routes/user-routes');
 app.use('/', userRoutes);
+
 
 app.use('*', (req, res) => {
     res.status(400).json({

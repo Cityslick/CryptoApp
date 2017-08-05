@@ -3,12 +3,15 @@ const cryptoRouter = express.Router();
 const getCrypto = require('../services/crypto/crypto-helper');
 const authHelpers = require('../services/auth/auth-helpers');
 const liveCrypto = require('../controllers/livecrypto-controller');
+const Users = require('../controllers/users-controller');
+const Coins = require('../models/crypto');
+
+cryptoRouter.get('/follow/:id', authHelpers.loginRequired, liveCrypto.follow);
+cryptoRouter.get('/', authHelpers.loginRequired, getCrypto.getPrices, liveCrypto.index);
+cryptoRouter.get('/user', authHelpers.loginRequired, Users.index);
 
 
-cryptoRouter.get('/dashboard', getCrypto.getPrices,
-         liveCrypto.index);
-
-cryptoRouter.get('/:id', getCrypto.getCoinFromDB, getCrypto.getTweets, liveCrypto.show);
+cryptoRouter.get('/:id', authHelpers.loginRequired, getCrypto.getCoinFromDB, getCrypto.getTweets, liveCrypto.show);
 
 module.exports = cryptoRouter;
 

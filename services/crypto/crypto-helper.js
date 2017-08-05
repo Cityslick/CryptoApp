@@ -30,7 +30,6 @@ function getPrices(req, res, next) {
 // }
 
 function getCoinFromDB(req, res, next) {
-    console.log('getCoinFromDB')
     Coin.findById(req.params.id)
         .then(coin => {
             res.locals.coin = coin;
@@ -42,7 +41,6 @@ function getCoinFromDB(req, res, next) {
 };
 
 function getTweets(req, res, next) {
-    console.log('getTweets');
     Coin.findById(req.params.id)
         .then(coin => {
             return fetch(`https://api.stocktwits.com/api/2/streams/symbol/${coin.handle}.json`);
