@@ -9,14 +9,6 @@ CREATE TABLE IF NOT EXISTS users (
     lastname VARCHAR(255) 
 );
 
-CREATE TABLE IF NOT EXISTS tracking (
-    id SERIAL primary key,
-    symbol VARCHAR(255),
-    name VARCHAR(255),
-    price BIGINT,
-    user_id INTEGER REFERENCES users(id),
-    coin_id INTEGER REFERENCES coins(id)
-);
 
 CREATE TABLE IF NOT EXISTS coins (
     id SERIAL primary key,

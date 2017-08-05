@@ -19,4 +19,12 @@ User.create = (user) => {
     `, [user.username, user.password_digest, user.email, user.firstname, user.lastname]);
 };
 
+User.trackCoin = id => {
+    return db.manyOrNone(`
+        SELECT * FROM coins
+        WHERE user_id = $1
+    `, [id]);
+}
+
+
 module.exports = User;
