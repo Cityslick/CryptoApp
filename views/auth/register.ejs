@@ -1,13 +1,26 @@
 <% include ../partials/boilerplate %>
 
-<form method='POST' action='/auth/register'>
-    <input name="firstname" type="text" placeholder="firstname" required />
-    <input name="lastname" type="text" placeholder="lastname" required />
-    <input name="username" type="text" placeholder="username" required />
-    <input name="email" type="email" placeholder="email" required />
-    <input name="password" type="password" placeholder="password" required />
-    <input type="submit" value="Register!" />
-
-</form>
+<div class="form-container">
+    <form method='POST' action='/auth/register'>
+        <div class="fields">
+            <input name="firstname" type="text" placeholder="firstname" required />
+        </div>
+        <div class="fields">
+            <input name="lastname" type="text" placeholder="lastname" required />
+        </div>
+        <div class="fields">
+            <input name="username" type="text" placeholder="username" required />
+        </div>
+        <div class="fields">
+            <input name="email" type="email" placeholder="email" required />
+        </div>
+        <div class="fields">
+            <input name="password" type="password" placeholder="password" required />
+        </div>
+        <div class="fields">
+            <input class="submit-input" type="submit" value="Register!" />
+        </div>
+    </form>
+</div>
 
 <% include ../partials/end %>

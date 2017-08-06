@@ -1,42 +1,103 @@
-<% include ../partials/boilerplate %>
-
-<h1>This is the dashboard</h1>
-<div class="currency">
-    <h1 class="symbol">BITCOIN</h1>
-    <h3 id="BTC"></h3>
+<% include ../partials/dashtemplate %>
+<div class="flex">
+    <div class="dashboard-container">
+        <div class="level-one">
+            <div class="currency" id="BTCcontainer">
+                <h1 class="symbol">BITCOIN</h1>
+                <h3 id="BTCprice"></h3>
+                <h3 id="BTCopen"></h3>
+                <h3 id="BTChigh"></h3>
+                <h3 id="BTClow"></h3>
+                <h3 id="BTCchange"></h3>
+                <br>
+                <button><a href="dashboard/1">MORE</a></button>
+            </div>
+            <div class="currency" id="ETHcontainer">
+                <h1 class="symbol">ETHEREUM</h1>
+                <h3 id="ETHprice"></h3>
+                <h3 id="ETHopen"></h3>
+                <h3 id="ETHhigh"></h3>
+                <h3 id="ETHlow"></h3>
+                <h3 id="ETHchange"></h3>
+                <br>
+                <button><a href="dashboard/2">MORE</a></button>
+            </div>
+            <div class="currency" id="LTCcontainer">
+                <h1 class="symbol">LITECOIN</h1>
+                <h3 id="LTCprice"></h3>
+                <h3 id="LTCopen"></h3>
+                <h3 id="LTChigh"></h3>
+                <h3 id="LTClow"></h3>
+                <h3 id="LTCchange"></h3>
+                <br>
+                <button><a href="dashboard/3">MORE</a></button>
+            </div>
+        </div>
+        <div class="level-two">
+            <div class="currency" id="DASHcontainer">
+                <h1 class="symbol">DASH</h1>
+                <h3 id="DASHprice"></h3>
+                <h3 id="DASHopen"></h3>
+                <h3 id="DASHhigh"></h3>
+                <h3 id="DASHlow"></h3>
+                <h3 id="DASHchange"></h3>
+                <br>
+                <button><a href="dashboard/4">MORE</a></button>
+            </div>
+            <div class="currency" id="XRPcontainer">
+                <h1 class="symbol">RIPPLE</h1>
+                <h3 id="XRPprice"></h3>
+                <h3 id="XRPopen"></h3>
+                <h3 id="XRPhigh"></h3>
+                <h3 id="XRPlow"></h3>
+                <h3 id="XRPchange"></h3>
+                <br>
+                <button><a href="dashboard/5">MORE</a></button>
+            </div>
+            <div class="currency" id="ZECcontainer">
+                <h1 class="symbol">ZCASH</h1>
+                <h3 id="ZECprice"></h3>
+                <h3 id="ZECopen"></h3>
+                <h3 id="ZEChigh"></h3>
+                <h3 id="ZEClow"></h3>
+                <h3 id="ZECchange"></h3>
+                <br>
+                <button><a href="dashboard/6">MORE</a></button>
+            </div>
+        </div>   
+        <div class="level-three">
+            <div class="currency" id="XEMcontainer">
+                <h1 class="symbol">NEM</h1>
+                <h3 id="XEMprice"></h3>
+                <h3 id="XEMopen"></h3>
+                <h3 id="XEMhigh"></h3>
+                <h3 id="XEMlow"></h3>
+                <h3 id="XEMchange"></h3>
+                <br>
+                <button><a href="dashboard/7">MORE</a></button>
+            </div>
+            <div class="currency" id="BCHcontainer">
+                <h1 class="symbol">BITCASH</h1>
+                <h3 id="BCHprice"></h3>
+                <h3 id="BCHopen"></h3>
+                <h3 id="BCHhigh"></h3>
+                <h3 id="BCHlow"></h3>
+                <h3 id="BCHchange"></h3>
+                <br>
+                <button><a href="dashboard/8">MORE</a></button>
+            </div>
+            <div class="currency" id="DGBcontainer">
+                <h1 class="symbol">DIGIBYTE</h1>
+                <h3 id="DGBprice"></h3>
+                <h3 id="DGBopen"></h3>
+                <h3 id="DGBhigh"></h3>
+                <h3 id="DGBlow"></h3>
+                <h3 id="DGBchange"></h3>
+                <br>
+                <button><a href="dashboard/9">MORE</a></button>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="currency">
-    <h1 class="symbol">ETHEREUM</h1>
-    <h3 id="ETH"></h3>
-</div>
-<div class="currency">
-    <h1 class="symbol">LITECOIN</h1>
-    <h3 id="LTC"></h3>
-</div>
-<div class="currency">
-    <h1 class="symbol">DASH</h1>
-    <h3 id="DASH"></h3>
-</div>
-<div class="currency">
-    <h1 class="symbol">RIPPLE</h1>
-    <h3 id="XRP"></h3>
-</div>
-<div class="currency">
-    <h1 class="symbol">ZCASH</h1>
-    <h3 id="ZEC"></h3>
-</div>
-<div class="currency">
-    <h1 class="symbol">NEM</h1>
-    <h3 id="XEM"></h3>
-</div>
-<div class="currency">
-    <h1 class="symbol">BITCASH</h1>
-    <h3 id="BCH"></h3>
-</div>
-<div class="currency">
-    <h1 class="symbol">DIGIBYTE</h1>
-    <h3 id="DGB"></h3>
-</div>
-
 
 <% include ../partials/end %>

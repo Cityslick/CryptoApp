@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Sans|Saira+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Orbitron|PT+Sans|Saira+Condensed');
 
 
 body {
     margin: 0 auto;
     width: 100%;
+    background-image: url('../images/circuit-board.png');
+    background-size: cover;
 }
 
 .links {
@@ -11,7 +13,7 @@ body {
     padding: 10px;
     margin: 0 auto;
     width: 100%;
-    background-color: #2C666E;
+    background-color: #003049;
     display: flex;
     justify-content: space-between;
 }
@@ -29,6 +31,86 @@ body {
 a {
     text-decoration: none;
     font-family: 'Saira Condensed', sans-serif;
-    font-size: 15pt;
+    font-size: 16pt;
     color: white;
+}
+
+h1 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 20pt;
+
+}
+
+button {
+    background-color: #003049;
+    border: none;
+    text-align: center;
+
+}
+
+button a {
+    color: white;
+    font-size: 20pt;
+}
+
+.cover-content {
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;    
+}
+
+.home-label {
+    height: 70%;
+    width: 30%;
+    /* background-color: #27233A; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    margin: 20px;
+}
+
+.title h1 {
+    font-size: 40pt;
+    color: white;
+    font-family: 'Orbitron', 'sans-serif';
+    letter-spacing: 12px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80vh;
+}
+
+input {
+    width: 300%;
+    height: 30px;
+}
+
+::-webkit-input-placeholder {
+    font-size: 12pt;
+}
+
+.fields {
+    margin: 10px;
+    padding: 5px;
+}
+
+.submit-input {
+    background-color: #003049;
+    color: white;
+    border: none;
+    font-size: 20pt;
+    font-family: 'Orbitron', 'sans-serif';
+    padding: 5px;
+    height: 35px;
 }

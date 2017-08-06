@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans+Condensed:300|Orbitron|PT+Sans|Saira+Condensed');
+
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    /* background-image: url('../images/circuit-board.png');
+    background-size: cover; */
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.links {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #0A0A0A;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list {
+    margin-right: 35px;
+    width: 100%;
+}
+
+#navbar{
+    display: flex;
+    margin-right: 5px;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 16pt;
+    font-weight: 100;
+    color: #00FF00;
+}
+
+h1 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 20pt;
+}
+
+h3 {
+    font-family: 'Saira Condensed', sans-serif;
+    margin-top: 10px;
+}
+.flex {
+    display: flex;
+}
+.dashboard-container {
+    display: flex;
+    width: 99.6vw;
+    min-height: 90vh;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex: 1 0 auto;
+}
+
+.currency {
+    border: 2px solid black;
+    background-color: #0C0C0C;
+    border-radius: 2%;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    color: white;
+    font-size: 13pt;
+    font-weight: 100;
+}
+
+.level-one {
+    min-width: 10%;
+    padding: 25px;
+}
+.level-two {
+    min-width: 10%;
+}
+.level-three {
+    min-width: 10%;
+    padding: 25px;
+    flex-direction: row;
+}
+
+button {
+    background-color: black;
+}

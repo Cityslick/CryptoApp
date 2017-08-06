@@ -22,18 +22,18 @@ function showData(data){
     console.log(data)
     Object.keys(data.DISPLAY).map((name, i) => {
         const value = data.DISPLAY[name];
-        $('#'+name).text(`Price: ${value.USD.PRICE}
-        Open: ${value.USD.OPEN24HOUR} 
-        High: ${value.USD.HIGH24HOUR} 
-        Low: ${value.USD.LOW24HOUR} 
-        Pct Change ${value.USD.CHANGEPCT24HOUR}`);
+        $('#'+name+'price').text(`Price: ${value.USD.PRICE}`);
+        $('#'+name+'open').text(`Open: ${value.USD.OPEN24HOUR}`);
+        $('#'+name+'high').text(`High: ${value.USD.HIGH24HOUR}`);
+        $('#'+name+'low').text(`Low: ${value.USD.LOW24HOUR}`);
+        $('#'+name+'change').text(`Pct Change ${value.USD.CHANGEPCT24HOUR}%`);
         
         if(value.USD.PRICE >= value.USD.OPEN24HOUR) {
-            $('#'+name).css('color', 'green');
+            $('#'+name+'container').css('color', '#00FF00');
             console.log('higher');
         } else {
             console.log('lower');
-            $('#'+name).css('color', 'red');
+            $('#'+name+'container').css('color', '#FF0000');
         }
     })
 
