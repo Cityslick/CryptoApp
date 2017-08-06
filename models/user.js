@@ -19,7 +19,13 @@ User.create = (user) => {
     `, [user.username, user.password_digest, user.email, user.firstname, user.lastname]);
 };
 
-
+User.showFollowed = (id) => {
+    return db.query(`
+        SELECT * FROM tracking
+        JOIN coins ON coin_id = coins.id
+        JOIN users ON user_id = users.id WHERE users.id = $1
+    `, [id]);
+}
 
 
 module.exports = User;

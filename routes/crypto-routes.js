@@ -8,7 +8,7 @@ const Coins = require('../models/crypto');
 
 cryptoRouter.get('/follow/:id', authHelpers.loginRequired, liveCrypto.follow);
 cryptoRouter.get('/', getCrypto.getPrices, liveCrypto.index);
-cryptoRouter.get('/user', authHelpers.loginRequired, Users.index);
+
 
 
 cryptoRouter.get('/:id', authHelpers.loginRequired, getCrypto.getCoinFromDB, getCrypto.getTweets, liveCrypto.show);

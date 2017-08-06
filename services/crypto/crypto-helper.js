@@ -22,10 +22,10 @@ function getPrices(req, res, next) {
 //     fetch('http://www.faroo.com/api?q=bitcoin&start=1&l=en&f=json&key=f98fb0a0ce69473d9c7e73599535d43b')
 //         .then(news => {
 //             console.log(res.news);
-//             next();
+//             return next();
 //         }).catch((err) => {
 //             console.log(err);
-//             next(err);
+//             return next(err);
 //         });
 // }
 
@@ -46,7 +46,6 @@ function getTweets(req, res, next) {
             return fetch(`https://api.stocktwits.com/api/2/streams/symbol/${coin.handle}.json`);
         }).then(fetchRes => fetchRes.json()).then(jsonRes => {
             res.locals.tweets = jsonRes;
-            console.log(jsonRes);
             return next();
         }).catch((err) => {
             console.log(err);
