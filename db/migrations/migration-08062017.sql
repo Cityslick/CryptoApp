@@ -1,4 +1,4 @@
-\c cryptocurrency
+
 
 CREATE TABLE IF NOT EXISTS tracking (
     id SERIAL primary key,
