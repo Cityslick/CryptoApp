@@ -24,7 +24,7 @@ usersController.showTracked = (req, res, next) => {
 }
 
 usersController.delete = (req, res) => {
-    console.log(req.params.id);
+    console.log("adsasfas");
 }
 
 usersController.create = (req, res, next) => {
