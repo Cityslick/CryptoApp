@@ -7,11 +7,11 @@ const Users = require('../controllers/users-controller');
 const Coins = require('../models/crypto');
 
 cryptoRouter.get('/follow/:id', authHelpers.loginRequired, liveCrypto.follow);
-cryptoRouter.get('/', getCrypto.getPrices, liveCrypto.index);
+cryptoRouter.get('/', authHelpers.loginRequired, getCrypto.getPrices, liveCrypto.index);
 
 
 
-cryptoRouter.get('/:id', getCrypto.getCoinFromDB, getCrypto.getTweets, liveCrypto.show);
+cryptoRouter.get('/:id', authHelpers.loginRequired, getCrypto.getCoinFromDB, getCrypto.getTweets, liveCrypto.show);
 
 module.exports = cryptoRouter;
 

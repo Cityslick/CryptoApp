@@ -37,9 +37,11 @@
                     <h3 id="<%= tracked[i].symbol %>high"></h3>
                     <h3 id="<%= tracked[i].symbol %>low"></h3>
                 </div>
-            <div class="More-btn">
-                <button><a href="#">Delete</a></button>
-            </div>
+                <div class="More-btn">
+                    <form method="POST" action="/dashboard/<%= tracked[i].id %>?_method=DELETE">
+                    <input type="submit" value="Delete" />
+                    </form>
+                </div>
             </div>
             
         </div>

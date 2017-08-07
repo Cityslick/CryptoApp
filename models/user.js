@@ -27,5 +27,11 @@ User.showFollowed = (id) => {
     `, [id]);
 }
 
+User.destroy = (id) => {
+    return db.none(`
+        DELETE FROM tracking
+        WHERE id = $1
+    `, [id])
+}
 
 module.exports = User;

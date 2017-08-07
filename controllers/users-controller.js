@@ -23,6 +23,9 @@ usersController.showTracked = (req, res, next) => {
     });
 }
 
+usersController.delete = (req, res) => {
+    console.log(req.params.id);
+}
 
 usersController.create = (req, res, next) => {
     const salt = bcrypt.genSaltSync();

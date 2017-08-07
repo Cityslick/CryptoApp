@@ -129,7 +129,7 @@ h3#DGBname, h3#DGBopen, h3#DGBhigh, h3#DGBlow, h3#DGBchange {
     align-items: center;
 }
 
-button {
+input {
     background-color: orangered;
     border: none;
     border-radius: 5%;
