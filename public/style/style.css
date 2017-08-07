@@ -4,8 +4,16 @@
 body {
     margin: 0 auto;
     width: 100%;
-    background-image: url('../images/circuit-board.png');
-    background-size: cover;
+    background-image: url('../images/Love-Coding.jpg');
+    background-size: cover; 
+}
+
+#particles-js {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 .links {
@@ -13,7 +21,7 @@ body {
     padding: 10px;
     margin: 0 auto;
     width: 100%;
-    background-color: #003049;
+    background-color: #1E7D1E;
     display: flex;
     justify-content: space-between;
 }
@@ -42,7 +50,7 @@ h1 {
 }
 
 button {
-    background-color: #003049;
+    background-color: #1E7D1E;
     border: none;
     text-align: center;
 
@@ -106,7 +114,7 @@ input {
 }
 
 .submit-input {
-    background-color: #003049;
+    background-color: #1E7D1E;
     color: white;
     border: none;
     font-size: 20pt;

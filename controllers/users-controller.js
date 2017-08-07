@@ -15,7 +15,7 @@ usersController.showTracked = (req, res, next) => {
     console.log('showfollowed method running;');
     User.showFollowed(req.user.id).then(followed => {
         console.log(followed);
-        res.locals.followed = followed;
+        res.locals.tracked = followed;
         return next();
     }).catch((err) => {
         console.log(err);

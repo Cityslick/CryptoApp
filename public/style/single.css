@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans+Condensed:300|Orbitron|PT+Sans|Saira+Condensed');
+
+
+body {
+    margin: 0 auto;
+    width: 99%;
+    height: 100%;
+    /* background-image: url('../images/circuit-board.png');
+    background-size: cover; */
+    background-color: #13161B;
+}
+
+.links {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #1E7D1E;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list {
+    margin-right: 35px;
+    width: 100%;
+}
+
+#navbar{
+    display: flex;
+    margin-right: 5px;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 16pt;
+    font-weight: 100;
+    color: white;
+}
+
+h1 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 20pt;
+}
+
+h3 {
+    font-family: 'Saira Condensed', sans-serif;
+    margin-top: 10px;
+    color: seagreen;
+    line-height: 150%;
+    background-color: #13161B;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+    margin-top: 25px;
+    flex-direction: column;
+}
+
+.main-content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.symbol-content {
+    width: 50%;
+}
+.symbol-content h3 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18pt;
+}
+
+.symbol-content #title {
+    color: tomato;
+    border-radius: 2%;
+    text-align: center;
+    font-size: 30pt;
+}
+
+.stocktwits {
+    margin: 10px;
+}
+.stocktwits h1 {
+    color: tomato;
+    text-align: center;
+    font-size: 30pt;
+    padding: 10px;
+}
+.stocktwits h3 {
+    text-align: center;
+    font-size: 13pt;
+    background-color: forestgreen;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+}
+.stocktwits img {
+    height: 50px;
+    width: 50px;
+    left: 46%;
+    position: relative;
+}
+
+
+div.tweet-row, div.tweet-body {
+    background-color: forestgreen;
+    width: 80%;
+    border-radius: 2%;
+    margin-left: 10%;
+}
+
+.follow-btn {
+    margin-top: 10%;
+    margin-left: 80%;
+    font-size: 30pt;
+}
+.follow-btn a {
+    font-size: 26pt;
+    background: seagreen;
+    padding: 6%;
+    border-radius: 8%;
+}

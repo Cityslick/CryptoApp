@@ -1,7 +1,49 @@
-<% include ../partials/boilerplate %>
+<% include ../partials/usertemplate %>
 
-<h1>This is the user page</h1>
-<h1>Welcome back, <%= user.username %>! </h1>
-<h3><%= followed.id %></h3>
+<div class="user-info">
+    <h1>Account Username: <%= user.username %></h1>
+    <h1>First Name: <%= user.firstname %></h1>
+    <h1>Last Name: <%= user.lastname %></h1>
+</div>
+<div class="tracker">
+    <h1>TRACKER...</h1>
+    <% for (let i = 0; i <tracked.length; i++) { %> 
+        <div class="currency" id="<%= tracked[i].symbol %>container">
+            
+            <div class="currency-container">
+                <div class="symbol-header">
+                    <div class="symbol-flex">
+                        <h1 class="symbol"><%= tracked[i].symbol %></h1>
+                    </div>
+                    <div class="price-flex">
+                        <h3 id="<%= tracked[i].symbol %>price"></h3>
+                    </div>
+                    <div class="change-flex">
+                        <h3 id="<%= tracked[i].symbol %>change"></h3>
+                    </div>
+                    <div class="mktcap">
+                        <h3 id="<%= tracked[i].symbol %>mkt"></h3>
+                    </div>
+                    <div class="volume">
+                        <h3 id="<%= tracked[i].symbol %>vol"></h3>
+                    </div>
+                    <div class="supply">
+                        <h3 id="<%= tracked[i].symbol %>supply"></h3>
+                    </div>
+                </div>
+                <div class="stats-row">
+                    <h3 style="color: orange" id="<%= tracked[i].symbol %>name"><%= tracked[i].symbol %></h3>
+                    <h3 id="<%= tracked[i].symbol %>open"></h3>
+                    <h3 id="<%= tracked[i].symbol %>high"></h3>
+                    <h3 id="<%= tracked[i].symbol %>low"></h3>
+                </div>
+            <div class="More-btn">
+                <button><a href="#">Delete</a></button>
+            </div>
+            </div>
+            
+        </div>
+    <% } %>
+</div>
 
 <% include ../partials/end %>

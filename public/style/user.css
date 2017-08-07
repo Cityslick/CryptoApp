@@ -1,13 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans+Condensed:300|Orbitron|PT+Sans|Saira+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Orbitron|Roboto|PT+Sans|Saira+Condensed');
 
 
 body {
     margin: 0 auto;
     width: 100%;
-    height: 100%;
-    /* background-image: url('../images/circuit-board.png');
-    background-size: cover; */
-    background-color: black;
+    background-color: #13161b; 
+}
+
+#particles-js {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 .links {
@@ -32,53 +37,39 @@ body {
 
 a {
     text-decoration: none;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Saira Condensed', sans-serif;
     font-size: 16pt;
-    font-weight: 100;
     color: white;
 }
 
 h1 {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 20pt;
+    color: white;
+    margin: 10px;
+    padding: 5px;
 }
-
-h3 {
-    font-family: 'Saira Condensed', sans-serif;
-    margin-top: 10px;
-}
-.flex {
-    display: flex;
-    height: 100vh;
-}
-.dashboard-container {
-    display: flex;
-    width: 99.6vw;
-    min-height: 90vh;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    flex: 1 0 auto;
-}
-
-.currency {
-    border-radius: 2%;
+.user-info {
+    background: black;
+    width: 30%;
+    margin: 10px;  
     text-align: center;
-    padding: 10px;
-    width: 100%;
-    font-size: 13pt;
-    font-weight: 100;
-    display: flex;
-    justify-content: flex-start;
+    border-radius: 2%; 
 }
 
+
+.tracker {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 .currency-container {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
     padding: 1%;
     border-bottom: 0.3px solid forestgreen;
-     background-color: #13161B; 
+    background-color: #13161B; 
 }
 .currency-container h3 {
     font-size: 18pt;
@@ -133,7 +124,7 @@ h3#DGBname, h3#DGBopen, h3#DGBhigh, h3#DGBlow, h3#DGBchange {
     display: flex;
     /* border-bottom: 0.3px solid forestgreen; */
     width: 10%;
-    margin-left: 2%;
+    margin-right: 2%;
     justify-content: center;
     align-items: center;
 }

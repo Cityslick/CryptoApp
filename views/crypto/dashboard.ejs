@@ -1,102 +1,324 @@
 <% include ../partials/dashtemplate %>
 <div class="flex">
     <div class="dashboard-container">
-        <div class="level-one">
-            <div class="currency" id="BTCcontainer">
-                <h1 class="symbol">BITCOIN</h1>
-                <h3 id="BTCprice"></h3>
-                <h3 id="BTCopen"></h3>
-                <h3 id="BTChigh"></h3>
-                <h3 id="BTClow"></h3>
-                <h3 id="BTCchange"></h3>
-                <br>
-                <button><a href="dashboard/1">MORE</a></button>
+
+        <div class="currency" id="BTCcontainer">
+
+            <div class="currency-container">
+                <div class="symbol-header">
+                    <div class="symbol-flex">
+                        <h1 class="symbol">BTC</h1>
+                    </div>
+                    <div class="price-flex">
+                        <h3 id="BTCprice"></h3>
+                    </div>
+                    <div class="change-flex">
+                        <h3 id="BTCchange"></h3>
+                    </div>
+                    <div class="mktcap">
+                        <h3 id="BTCmkt"></h3>
+                    </div>
+                    <div class="volume">
+                        <h3 id="BTCvol"></h3>
+                    </div>
+                    <div class="supply">
+                        <h3 id="BTCsupply"></h3>
+                    </div>
+                </div>
+                <div class="stats-row">
+                    <h3 style="color: orange" id="BTCname">Bitcoin</h3>
+                    <h3 id="BTCopen"></h3>
+                    <h3 id="BTChigh"></h3>
+                    <h3 id="BTClow"></h3>
+                </div>
             </div>
-            <div class="currency" id="ETHcontainer">
-                <h1 class="symbol">ETHEREUM</h1>
-                <h3 id="ETHprice"></h3>
-                <h3 id="ETHopen"></h3>
-                <h3 id="ETHhigh"></h3>
-                <h3 id="ETHlow"></h3>
-                <h3 id="ETHchange"></h3>
-                <br>
-                <button><a href="dashboard/2">MORE</a></button>
+            <div class="More-btn">
+                <button><a href="dashboard/1">More</a></button>
             </div>
-            <div class="currency" id="LTCcontainer">
-                <h1 class="symbol">LITECOIN</h1>
-                <h3 id="LTCprice"></h3>
-                <h3 id="LTCopen"></h3>
-                <h3 id="LTChigh"></h3>
-                <h3 id="LTClow"></h3>
-                <h3 id="LTCchange"></h3>
-                <br>
-                <button><a href="dashboard/3">MORE</a></button>
-            </div>
+
         </div>
-        <div class="level-two">
-            <div class="currency" id="DASHcontainer">
-                <h1 class="symbol">DASH</h1>
-                <h3 id="DASHprice"></h3>
-                <h3 id="DASHopen"></h3>
-                <h3 id="DASHhigh"></h3>
-                <h3 id="DASHlow"></h3>
-                <h3 id="DASHchange"></h3>
-                <br>
-                <button><a href="dashboard/4">MORE</a></button>
+        <div class="currency" id="ETHcontainer">
+            
+            <div class="currency-container">
+                <div class="symbol-header">
+                    <div class="symbol-flex">
+                        <h1 class="symbol">ETH</h1>
+                    </div>
+                    <div class="price-flex">
+                        <h3 id="ETHprice"></h3>
+                    </div>
+                    <div class="change-flex">
+                        <h3 id="ETHchange"></h3>
+                    </div>
+                    <div class="mktcap">
+                        <h3 id="ETHmkt"></h3>
+                    </div>
+                    <div class="volume">
+                        <h3 id="ETHvol"></h3>
+                    </div>
+                    <div class="supply">
+                        <h3 id="ETHsupply"></h3>
+                    </div>
+                </div>
+                <div class="stats-row">
+                    <h3 style="color: orange" id="ETHname">Ethereum</h3>
+                    <h3 id="ETHopen"></h3>
+                    <h3 id="ETHhigh"></h3>
+                    <h3 id="ETHlow"></h3>
+                </div>
             </div>
-            <div class="currency" id="XRPcontainer">
-                <h1 class="symbol">RIPPLE</h1>
-                <h3 id="XRPprice"></h3>
-                <h3 id="XRPopen"></h3>
-                <h3 id="XRPhigh"></h3>
-                <h3 id="XRPlow"></h3>
-                <h3 id="XRPchange"></h3>
-                <br>
-                <button><a href="dashboard/5">MORE</a></button>
+            <div class="More-btn">
+                <button><a href="dashboard/2">More</a></button>
             </div>
-            <div class="currency" id="ZECcontainer">
-                <h1 class="symbol">ZCASH</h1>
-                <h3 id="ZECprice"></h3>
-                <h3 id="ZECopen"></h3>
-                <h3 id="ZEChigh"></h3>
-                <h3 id="ZEClow"></h3>
-                <h3 id="ZECchange"></h3>
-                <br>
-                <button><a href="dashboard/6">MORE</a></button>
-            </div>
-        </div>   
-        <div class="level-three">
-            <div class="currency" id="XEMcontainer">
-                <h1 class="symbol">NEM</h1>
-                <h3 id="XEMprice"></h3>
-                <h3 id="XEMopen"></h3>
-                <h3 id="XEMhigh"></h3>
-                <h3 id="XEMlow"></h3>
-                <h3 id="XEMchange"></h3>
-                <br>
-                <button><a href="dashboard/7">MORE</a></button>
-            </div>
-            <div class="currency" id="BCHcontainer">
-                <h1 class="symbol">BITCASH</h1>
-                <h3 id="BCHprice"></h3>
-                <h3 id="BCHopen"></h3>
-                <h3 id="BCHhigh"></h3>
-                <h3 id="BCHlow"></h3>
-                <h3 id="BCHchange"></h3>
-                <br>
-                <button><a href="dashboard/8">MORE</a></button>
-            </div>
-            <div class="currency" id="DGBcontainer">
-                <h1 class="symbol">DIGIBYTE</h1>
-                <h3 id="DGBprice"></h3>
-                <h3 id="DGBopen"></h3>
-                <h3 id="DGBhigh"></h3>
-                <h3 id="DGBlow"></h3>
-                <h3 id="DGBchange"></h3>
-                <br>
-                <button><a href="dashboard/9">MORE</a></button>
-            </div>
+            
         </div>
+        <div class="currency" id="LTCcontainer">
+            
+            <div class="currency-container">
+                <div class="symbol-header">
+                    <div class="symbol-flex">
+                        <h1 class="symbol">LTC</h1>
+                    </div>
+                    <div class="price-flex">
+                        <h3 id="LTCprice"></h3>
+                    </div>
+                    <div class="change-flex">
+                        <h3 id="LTCchange"></h3>
+                    </div>
+                    <div class="mktcap">
+                        <h3 id="LTCmkt"></h3>
+                    </div>
+                    <div class="volume">
+                        <h3 id="LTCvol"></h3>
+                    </div>
+                    <div class="supply">
+                        <h3 id="LTCsupply"></h3>
+                    </div>
+                </div>
+                <div class="stats-row">
+                    <h3 style="color: orange" id="LTCname">Litecoin</h3>
+                    <h3 id="LTCopen"></h3>
+                    <h3 id="LTChigh"></h3>
+                    <h3 id="LTClow"></h3>
+                </div>
+            </div>
+            <div class="More-btn">
+                <button><a href="dashboard/3">More</a></button>
+            </div>
+            
+        </div>    
+
+        <div class="currency" id="DASHcontainer">
+            
+            <div class="currency-container">
+                <div class="symbol-header">
+                    <div class="symbol-flex">
+                        <h1 class="symbol">DASH</h1>
+                    </div>
+                    <div class="price-flex">
+                        <h3 id="DASHprice"></h3>
+                    </div>
+                    <div class="change-flex">
+                        <h3 id="DASHchange"></h3>
+                    </div>
+                    <div class="mktcap">
+                        <h3 id="DASHmkt"></h3>
+                    </div>
+                    <div class="volume">
+                        <h3 id="DASHvol"></h3>
+                    </div>
+                    <div class="supply">
+                        <h3 id="DASHsupply"></h3>
+                    </div>
+                </div>
+                <div class="stats-row">
+                    <h3 style="color: orange" id="DASHname">DASH</h3>
+                    <h3 id="DASHopen"></h3>
+                    <h3 id="DASHhigh"></h3>
+                    <h3 id="DASHlow"></h3>
+                </div>
+            </div>
+            <div class="More-btn">
+                <button><a href="dashboard/4">More</a></button>
+            </div>
+            
+        </div>
+         <div class="currency" id="XRPcontainer">
+            
+            <div class="currency-container">
+                <div class="symbol-header">
+                    <div class="symbol-flex">
+                        <h1 class="symbol">XRP</h1>
+                    </div>
+                    <div class="price-flex">
+                        <h3 id="XRPprice"></h3>
+                    </div>
+                    <div class="change-flex">
+                        <h3 id="XRPchange"></h3>
+                    </div>
+                    <div class="mktcap">
+                        <h3 id="XRPmkt"></h3>
+                    </div>
+                    <div class="volume">
+                        <h3 id="XRPvol"></h3>
+                    </div>
+                    <div class="supply">
+                        <h3 id="XRPsupply"></h3>
+                    </div>
+                </div>
+                <div class="stats-row">
+                    <h3 style="color: orange" id="XRPname">Ripple</h3>
+                    <h3 id="XRPopen"></h3>
+                    <h3 id="XRPhigh"></h3>
+                    <h3 id="XRPlow"></h3>
+                </div>
+            </div>
+            <div class="More-btn">
+                <button><a href="dashboard/5">More</a></button>
+            </div>
+            
+        </div>
+         <div class="currency" id="ZECcontainer">
+            
+            <div class="currency-container">
+                <div class="symbol-header">
+                    <div class="symbol-flex">
+                        <h1 class="symbol">ZEC</h1>
+                    </div>
+                    <div class="price-flex">
+                        <h3 id="ZECprice"></h3>
+                    </div>
+                    <div class="change-flex">
+                        <h3 id="ZECchange"></h3>
+                    </div>
+                    <div class="mktcap">
+                        <h3 id="ZECmkt"></h3>
+                    </div>
+                    <div class="volume">
+                        <h3 id="ZECvol"></h3>
+                    </div>
+                    <div class="supply">
+                        <h3 id="ZECsupply"></h3>
+                    </div>
+                </div>
+                <div class="stats-row">
+                    <h3 style="color: orange" id="ZECname">ZCash</h3>
+                    <h3 id="ZECopen"></h3>
+                    <h3 id="ZEChigh"></h3>
+                    <h3 id="ZEClow"></h3>
+                </div>
+            </div>
+            <div class="More-btn">
+                <button><a href="dashboard/6">More</a></button>
+            </div>
+            
+        </div>
+        <div class="currency" id="XEMcontainer">
+            
+            <div class="currency-container">
+                <div class="symbol-header">
+                    <div class="symbol-flex">
+                        <h1 class="symbol">XEM</h1>
+                    </div>
+                    <div class="price-flex">
+                        <h3 id="XEMprice"></h3>
+                    </div>
+                    <div class="change-flex">
+                        <h3 id="XEMchange"></h3>
+                    </div>
+                    <div class="mktcap">
+                        <h3 id="XEMmkt"></h3>
+                    </div>
+                    <div class="volume">
+                        <h3 id="XEMvol"></h3>
+                    </div>
+                    <div class="supply">
+                        <h3 id="XEMsupply"></h3>
+                    </div>
+                </div>
+                <div class="stats-row">
+                    <h3 style="color: orange" id="XEMname">NEM</h3>
+                    <h3 id="XEMopen"></h3>
+                    <h3 id="XEMhigh"></h3>
+                    <h3 id="XEMlow"></h3>
+                </div>
+            </div>
+            <div class="More-btn">
+                <button><a href="dashboard/7">More</a></button>
+            </div>
+            
+        </div>
+        <div class="currency" id="BCHcontainer">
+            
+            <div class="currency-container">
+                <div class="symbol-header">
+                    <div class="symbol-flex">
+                        <h1 class="symbol">BCH</h1>
+                    </div>
+                    <div class="price-flex">
+                        <h3 id="BCHprice"></h3>
+                    </div>
+                    <div class="change-flex">
+                        <h3 id="BCHchange"></h3>
+                    </div>
+                    <div class="mktcap">
+                        <h3 id="BCHmkt"></h3>
+                    </div>
+                    <div class="volume">
+                        <h3 id="BCHvol"></h3>
+                    </div>
+                    <div class="supply">
+                        <h3 id="BCHsupply"></h3>
+                    </div>
+                </div>
+                <div class="stats-row">
+                    <h3 style="color: orange" id="BCHname">BitCash</h3>
+                    <h3 id="BCHopen"></h3>
+                    <h3 id="BCHhigh"></h3>
+                    <h3 id="BCHlow"></h3>
+                </div>
+            </div>
+            <div class="More-btn">
+                <button><a href="dashboard/8">More</a></button>
+            </div>
+            
+        </div>
+        <div class="currency" id="DGBcontainer">
+            
+            <div class="currency-container">
+                <div class="symbol-header">
+                    <div class="symbol-flex">
+                        <h1 class="symbol">DGB</h1>
+                    </div>
+                    <div class="price-flex">
+                        <h3 id="DGBprice"></h3>
+                    </div>
+                    <div class="change-flex">
+                        <h3 id="DGBchange"></h3>
+                    </div>
+                    <div class="mktcap">
+                        <h3 id="DGBmkt"></h3>
+                    </div>
+                    <div class="volume">
+                        <h3 id="DGBvol"></h3>
+                    </div>
+                    <div class="supply">
+                        <h3 id="DGBsupply"></h3>
+                    </div>
+                </div>
+                <div class="stats-row">
+                    <h3 style="color: orange" id="DGBname">Digibyte</h3>
+                    <h3 id="DGBopen"></h3>
+                    <h3 id="DGBhigh"></h3>
+                    <h3 id="DGBlow"></h3>
+                </div>
+            </div>
+            <div class="More-btn">
+                <button><a href="dashboard/9">More</a></button>
+            </div>
+            
+        </div>
+        
     </div>
 </div>
 

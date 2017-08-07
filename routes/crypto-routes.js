@@ -11,7 +11,7 @@ cryptoRouter.get('/', getCrypto.getPrices, liveCrypto.index);
 
 
 
-cryptoRouter.get('/:id', authHelpers.loginRequired, getCrypto.getCoinFromDB, getCrypto.getTweets, liveCrypto.show);
+cryptoRouter.get('/:id', getCrypto.getCoinFromDB, getCrypto.getTweets, liveCrypto.show);
 
 module.exports = cryptoRouter;
 

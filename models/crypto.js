@@ -25,13 +25,6 @@ Coin.follow = (user_id, coin_id) => {
     `, [user_id, coin_id]);
 }
 
-Coin.showFollowed = (id) => {
-    console.log('following')
-    return db.query(`
-        SELECT * FROM tracking
-        JOIN users ON user_id = users.id WHERE users.id = $1
-        JOIN coins ON coin_id = coins.id
-    `, [id]);
-}
+
 
 module.exports = Coin;

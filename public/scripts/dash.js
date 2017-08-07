@@ -22,11 +22,14 @@ function showData(data){
     console.log(data)
     Object.keys(data.DISPLAY).map((name, i) => {
         const value = data.DISPLAY[name];
-        $('#'+name+'price').text(`Price: ${value.USD.PRICE}`);
+        $('#'+name+'price').text(`${value.USD.PRICE}`);
         $('#'+name+'open').text(`Open: ${value.USD.OPEN24HOUR}`);
         $('#'+name+'high').text(`High: ${value.USD.HIGH24HOUR}`);
         $('#'+name+'low').text(`Low: ${value.USD.LOW24HOUR}`);
-        $('#'+name+'change').text(`Pct Change ${value.USD.CHANGEPCT24HOUR}%`);
+        $('#'+name+'change').text(`${value.USD.CHANGEPCT24HOUR}%`);
+        $('#'+name+'mkt').text(`Mkt Cap: ${value.USD.MKTCAP}`);
+        $('#'+name+'vol').text(`Volume: ${value.USD.VOLUME24HOUR}`);
+        $('#'+name+'supply').text(`Supply: ${value.USD.SUPPLY}`);
         
         if(value.USD.PRICE >= value.USD.OPEN24HOUR) {
             $('#'+name+'container').css('color', '#00FF00');
@@ -52,6 +55,9 @@ function showData(data){
     //     console.log(coinList);
     //     showData(coinList);
     // }
+
+
+
 });
 
 

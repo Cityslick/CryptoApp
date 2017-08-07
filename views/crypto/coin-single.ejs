@@ -1,12 +1,53 @@
-<% include ../partials/boilerplate %>
+<% include ../partials/coins-single %>
 
-<h3><%= coin.id %></h3>
-<h3><%= tweets.symbol.title %></h3>
-<h3><%= tweets.symbol.symbol %></h3>
-<h3 id="<%= coin.symbol %>"></h3>
-<h3><%= coin.description %></h3>
-<h3><%= tweets.messages[0].body %></h3>
-<a href="/dashboard/follow/<%= coin.id %>">FOLLOW</a>
+<div class="flex">
+
+    <div class="main-content">
+        
+        <div class="symbol-content">
+            <h3 id="title"><%= tweets.symbol.title %></h3>
+            <h3 id="<%= coin.symbol %>"></h3>
+            <h3><%= coin.description %></h3>
+            <div class="follow-btn">
+                <a href="/dashboard/follow/<%= coin.id %>">FOLLOW</a>
+            </div>
+        </div>
+
+        <div class="stocktwits">
+            <h1>StockTwits</h1>
+            <br>
+            <div class="tweet-body">
+                <br>
+                <img src="<%= tweets.messages[0].user.avatar_url %>">
+                <h3 style="font-size: 20pt;"><%= tweets.messages[0].user.username %></h3>    
+                <h3><%= tweets.messages[0].body %></h3>
+            </div>
+            <br>
+            <div class="tweet-body">
+                <br>
+                <img src="<%= tweets.messages[1].user.avatar_url %>">
+                <h3 style="font-size: 20pt;"><%= tweets.messages[1].user.username %></h3>    
+                <h3><%= tweets.messages[1].body %></h3>
+            </div>
+            <br>
+            <div class="tweet-body">
+                <br>
+                <img src="<%= tweets.messages[2].user.avatar_url %>">
+                <h3 style="font-size: 20pt;"><%= tweets.messages[2].user.username %></h3>    
+                <h3><%= tweets.messages[2].body %></h3>
+            </div>
+            <br>
+            <div class="tweet-body">
+                <br>
+                <img src="<%= tweets.messages[3].user.avatar_url %>">
+                <h3 style="font-size: 20pt;"><%= tweets.messages[3].user.username %></h3>    
+                <h3><%= tweets.messages[3].body %></h3>
+            </div>
+            <br>
+        </div>
+
+    </div>
 
 
+</div>
 <% include ../partials/end %>
